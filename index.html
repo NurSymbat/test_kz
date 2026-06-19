@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#f7f9fb",
+                    "secondary": "#006879",
+                    "surface-container-highest": "#e0e3e5",
+                    "primary-container": "#1e4477",
+                    "accent-cyan": "#60B9CE",
+                    "primary": "#002d5d",
+                    "on-primary": "#ffffff",
+                    "error-red": "#DC3545",
+                    "tertiary-fixed": "#dee0ff",
+                    "outline": "#737780",
+                    "on-background": "#191c1e",
+                    "secondary-fixed-dim": "#7bd3e9",
+                    "inverse-on-surface": "#eff1f3",
+                    "outline-variant": "#c3c6d1",
+                    "surface-tint": "#3c5f94",
+                    "surface-variant": "#e0e3e5",
+                    "tertiary": "#252c4e",
+                    "state-blue": "#1E4477",
+                    "halal-green": "#2E7D32", /* Specific accent for Halal content */
+                    "on-tertiary-fixed": "#12193a",
+                    "surface-container-low": "#f2f4f6",
+                    "on-primary-container": "#90b2ec",
+                    "surface-dim": "#d8dadc",
+                    "on-surface": "#191c1e",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "surface-container-high": "#e6e8ea",
+                    "surface-container": "#eceef0",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#a9edff",
+                    "secondary-container": "#8fe7fd",
+                    "primary-fixed": "#d6e3ff",
+                    "on-tertiary-container": "#a9afd9",
+                    "surface": "#f7f9fb",
+                    "background": "#f7f9fb",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#004e5b",
+                    "tertiary-container": "#3c4265",
+                    "on-secondary-container": "#00697a",
+                    "deep-navy": "#010527",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#a8c8ff",
+                    "primary-fixed-dim": "#a8c8ff",
+                    "surface-gray": "#E2E8F0",
+                    "on-primary-fixed": "#001b3c",
+                    "inverse-surface": "#2d3133",
+                    "on-surface-variant": "#43474f",
+                    "on-primary-fixed-variant": "#22477a",
+                    "tertiary-fixed-dim": "#bec4ef",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed": "#001f26",
+                    "on-tertiary-fixed-variant": "#3e4568"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "unit": "8px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "margin-desktop": "40px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "headline-xl-mobile": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f7f9fb; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .halal-gradient { background: linear-gradient(135deg, #002d5d 0%, #2E7D32 100%); }
+        .card-shadow { box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-bright text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-deep-navy text-on-primary font-headline-lg-mobile text-headline-lg-mobile docked full-width top-0 border-b border-outline-variant flex justify-between items-center px-margin-mobile h-16 w-full fixed top-0 z-50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent-cyan" data-icon="menu">menu</span>
+<h1 class="font-headline-md text-headline-md font-bold text-on-primary">KAZSTANDARD HALAL</h1>
+</div>
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A stylized professional portrait of a government official or institute representative, clean corporate style, soft studio lighting against a solid deep navy background, reflecting authority and transparency of the Kazakhstan Institute of Standardization." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJaIBY_jYTLvOHvW9yAf9JhX_hzhR1XTFzzA_bUx3JPWdwGCqlJwvoKdeUhgMB8jB9TlIMk1ubkIFdMhyUs3KhGPEmFZMQJ_6VcdzBpqMG5-ZJT-eHW-2rFR2dt7Kc0j0DmNLG2ykiiNuwi1LKnbl-_O-Ba6myyrsGGV7QGc3YX_x8mUMgth4wVmRz7eOBGFc5eSwQ8O8ZeirMue0xq0QT3QPpn-J1d2SUCXxkCcwMXkMNTrODaN7tJ3cz3usd4hZzcOwJZTEUDmk"/>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-20 pb-24 px-margin-mobile min-h-screen">
+<!-- Hero Section / Title -->
+<section class="mb-8">
+<div class="halal-gradient rounded-xl p-6 text-on-primary mb-6 relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-headline-xl-mobile text-headline-xl-mobile mb-2">Направление Халал</h2>
+<p class="font-body-md text-body-md opacity-90">Единая система стандартизации и сертификации продукции Халал в Республике Казахстан.</p>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-[120px]" data-icon="verified">verified</span>
+</div>
+</div>
+</section>
+<!-- Subsection Cards -->
+<div class="grid grid-cols-1 gap-4">
+<!-- Accreditation -->
+<a class="group bg-surface-container-lowest border border-surface-gray rounded-xl p-5 card-shadow transition-all active:scale-[0.98] flex items-start gap-4" href="halal-accreditation.html">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-halal-green/10 transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-halal-green" data-icon="verified">verified</span>
+</div>
+<div>
+<h3 class="font-headline-md text-[18px] text-primary mb-1">Аккредитация Халал</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Процесс официального признания компетентности органов по подтверждению соответствия в сфере Халал.</p>
+</div>
+</a>
+<!-- Policies -->
+<a class="group bg-surface-container-lowest border border-surface-gray rounded-xl p-5 card-shadow transition-all active:scale-[0.98] flex items-start gap-4" href="ops-policy.html">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-halal-green/10 transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-halal-green" data-icon="policy">policy</span>
+</div>
+<div>
+<h3 class="font-headline-md text-[18px] text-primary mb-1">Политики ОПС Халал</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Основные принципы, правила и руководящие указания для органов по сертификации продукции Халал.</p>
+</div>
+</a>
+<!-- Certification -->
+<a class="group bg-surface-container-lowest border border-surface-gray rounded-xl p-5 card-shadow transition-all active:scale-[0.98] flex items-start gap-4" href="halal-certification.html">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-halal-green/10 transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-halal-green" data-icon="workspace_premium">workspace_premium</span>
+</div>
+<div>
+<h3 class="font-headline-md text-[18px] text-primary mb-1">Сертификация Халал</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Процедура подтверждения соответствия продукции установленным требованиям стандартов Халал.</p>
+</div>
+</a>
+<!-- Regulatory Documents -->
+<a class="group bg-surface-container-lowest border border-surface-gray rounded-xl p-5 card-shadow transition-all active:scale-[0.98] flex items-start gap-4" href="standards-registry.html">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-halal-green/10 transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-halal-green" data-icon="description">description</span>
+</div>
+<div>
+<h3 class="font-headline-md text-[18px] text-primary mb-1">Нормативные документы</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Перечень стандартов, технических регламентов и нормативных актов, регулирующих отрасль Халал.</p>
+</div>
+</a>
+</div>
+<!-- Informational Banner -->
+<section class="mt-8 mb-4">
+<div class="bg-surface-container rounded-xl overflow-hidden">
+<div class="h-48 relative">
+<img class="w-full h-full object-cover" data-alt="A macro photograph of a laboratory setting with clean glass equipment, reflecting precision and high standards. The lighting is bright and hospital-clean, featuring cool blue tones mixed with natural green plants in the background to symbolize the Halal organic and pure nature. A professional and authoritative atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB19LvLufc2H_zq1xoYQhH0QidasPhLqq8GBYadw8tHjbJbJWoZ8bw5PmNqmMf6z9kPJaUK32xU2kx-S71z5QQifc9D8ErzNdC_O_DSdJ1jWyoo9Z9rYSIuG7hi119wIISz4NFQtMswvPC2gh0wbWYRTi3-T_JD1rdU3bA7ZS2vrg83yTZtplqik9IptrMTeEHTxx_hKcLWCBgy5lQniGMoq_YA0LGcAuh3zjY0az3OWV8DiGUMwLkySOU7X_okuUYNJ0onJjiWFrM"/>
+<div class="absolute inset-0 bg-primary/20"></div>
+</div>
+<div class="p-6">
+<h4 class="font-label-md text-label-md text-halal-green uppercase mb-2">Международное признание</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">КазСтандарт ведет активную работу по международной гармонизации стандартов Халал с ведущими мировыми организациями (SMIIC, JAKIM).</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile py-8 flex flex-col gap-4 bg-deep-navy dark:bg-on-surface text-on-primary font-body-sm text-body-sm">
+<div class="flex flex-col gap-2">
+<div class="font-label-md text-label-md text-accent-cyan">KAZSTANDARD</div>
+<p class="opacity-80">© 2024 РГП «Казахстанский институт стандартизации и метрологии»</p>
+</div>
+<div class="flex flex-wrap gap-4 mt-2">
+<a class="text-on-primary/80 hover:text-accent-cyan transition-colors" href="#">Facebook</a>
+<a class="text-on-primary/80 hover:text-accent-cyan transition-colors" href="#">Instagram</a>
+<a class="text-on-primary/80 hover:text-accent-cyan transition-colors" href="#">YouTube</a>
+<a class="text-accent-cyan underline" href="#">Контакты</a>
+</div>
+</footer>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-2 bg-surface-container-lowest border-t border-surface-gray shadow-lg rounded-t-xl">
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-transform active:scale-90 px-4 py-1">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm">Главная</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 transition-transform active:scale-90">
+<span class="material-symbols-outlined" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm">Аккредитация</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-transform active:scale-90 px-4 py-1">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-label-sm text-label-sm">Документы</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-transform active:scale-90 px-4 py-1">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+<span class="font-label-sm text-label-sm">Процесс</span>
+</button>
+</nav>
+<script>
+        // Micro-interaction for cards
+        document.querySelectorAll('a.group').forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.style.transform = 'scale(0.98)';
+            });
+            card.addEventListener('touchend', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body></html>
